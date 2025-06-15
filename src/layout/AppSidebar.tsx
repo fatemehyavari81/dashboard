@@ -28,34 +28,34 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
-    name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    name: "داشبورد",
+    subItems: [{ name: "فروشگاه آنلاین", path: "/", pro: false }],
   },
   {
     icon: <CalenderIcon />,
-    name: "Calendar",
+    name: "تقویم",
     path: "/calendar",
   },
   {
     icon: <UserCircleIcon />,
-    name: "User Profile",
+    name: "پروفایل کاربر",
     path: "/profile",
   },
   {
-    name: "Forms",
+    name: "فرم‌ها",
     icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    subItems: [{ name: "اجزای فرم", path: "/form-elements", pro: false }],
   },
   {
-    name: "Tables",
+    name: "جدول‌ها",
     icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+    subItems: [{ name: "جداول پایه", path: "/basic-tables", pro: false }],
   },
   {
-    name: "Pages",
+    name: "صفحات",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
+      { name: "صفحه خالی", path: "/blank", pro: false },
       { name: "404 Error", path: "/error-404", pro: false },
     ],
   },
@@ -64,30 +64,30 @@ const navItems: NavItem[] = [
 const othersItems: NavItem[] = [
   {
     icon: <PieChartIcon />,
-    name: "Charts",
+    name: "نمودار ها",
     subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false },
+      { name: "نمودار خطی", path: "/line-chart", pro: false },
+      { name: "نمودار میله‌ای", path: "/bar-chart", pro: false },
     ],
   },
   {
     icon: <BoxCubeIcon />,
-    name: "UI Elements",
+    name: " مؤلفه‌های UI",
     subItems: [
-      { name: "Alerts", path: "/alerts", pro: false },
-      { name: "Avatar", path: "/avatars", pro: false },
-      { name: "Badge", path: "/badge", pro: false },
-      { name: "Buttons", path: "/buttons", pro: false },
-      { name: "Images", path: "/images", pro: false },
-      { name: "Videos", path: "/videos", pro: false },
+      { name: "هشدارها", path: "/alerts", pro: false },
+      { name: "تصویر نمایه", path: "/avatars", pro: false },
+      { name: "نشان", path: "/badge", pro: false },
+      { name: "دکمه‌ها", path: "/buttons", pro: false },
+      { name: "تصاویر", path: "/images", pro: false },
+      { name: "ویدیوها", path: "/videos", pro: false },
     ],
   },
   {
     icon: <PlugInIcon />,
-    name: "Authentication",
+    name: "احراز هویت",
     subItems: [
-      { name: "Sign In", path: "/signin", pro: false },
-      { name: "Sign Up", path: "/signup", pro: false },
+      { name: "ورود", path: "/signin", pro: false },
+      { name: "ثبت‌نام", path: "/signup", pro: false },
     ],
   },
 ];
@@ -285,7 +285,7 @@ const AppSidebar: React.FC = () => {
 
   return (
     <aside
-      className={`fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white dark:bg-gray-900 dark:border-gray-800 text-gray-900 h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200 
+      className={`fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 right-0 bg-white dark:bg-gray-900 dark:border-gray-800 text-gray-900 h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200
         ${
           isExpanded || isMobileOpen
             ? "w-[290px]"
@@ -293,14 +293,14 @@ const AppSidebar: React.FC = () => {
             ? "w-[290px]"
             : "w-[90px]"
         }
-        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
+        ${isMobileOpen ? "translate-x-0" : "translate-x-[100%]"}
         lg:translate-x-0`}
       onMouseEnter={() => !isExpanded && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
         className={`py-8 flex ${
-          !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
+          !isExpanded && !isHovered ? "lg:justify-end" : "justify-start"
         }`}
       >
         <Link to="/">
@@ -343,7 +343,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Menu"
+                  "منو"
                 ) : (
                   <HorizontaLDots className="size-6" />
                 )}
@@ -359,7 +359,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Others"
+                  "سایر موارد"
                 ) : (
                   <HorizontaLDots />
                 )}

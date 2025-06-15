@@ -9,44 +9,44 @@ import DatePicker from "../date-picker.tsx";
 export default function DefaultInputs() {
   const [showPassword, setShowPassword] = useState(false);
   const options = [
-    { value: "marketing", label: "Marketing" },
-    { value: "template", label: "Template" },
-    { value: "development", label: "Development" },
+    { value: "marketing", label: "بازاریابی" },
+    { value: "template", label: "قالب" },
+    { value: "development", label: "توسعه" },
   ];
   const handleSelectChange = (value: string) => {
     console.log("Selected value:", value);
   };
 
   return (
-    <ComponentCard title="Default Inputs">
+    <ComponentCard title="ورودی‌های پیش‌فرض">
       <div className="space-y-6">
         <div>
-          <Label htmlFor="input">Input</Label>
+          <Label htmlFor="input">ورودی</Label>
           <Input type="text" id="input" />
         </div>
         <div>
-          <Label htmlFor="inputTwo">Input with Placeholder</Label>
+          <Label htmlFor="inputTwo">ورودی با متن راهنما</Label>
           <Input type="text" id="inputTwo" placeholder="info@gmail.com" />
         </div>
         <div>
-          <Label>Select Input</Label>
+          <Label>انتخاب ورودی</Label>
           <Select
             options={options}
-            placeholder="Select an option"
+            placeholder="یک گزینه انتخاب کنید"
             onChange={handleSelectChange}
             className="dark:bg-dark-900"
           />
         </div>
         <div>
-          <Label>Password Input</Label>
+          <Label> ورودی رمز عبور</Label>
           <div className="relative">
             <Input
               type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
+              placeholder="رمز عبور خود را وارد کنید"
             />
             <button
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute z-30 -translate-y-1/2 cursor-pointer right-4 top-1/2"
+              className="absolute z-30 -translate-y-1/2 cursor-pointer left-4 top-1/2"
             >
               {showPassword ? (
                 <EyeIcon className="fill-gray-500 dark:fill-gray-400 size-5" />
@@ -60,8 +60,8 @@ export default function DefaultInputs() {
         <div>
           <DatePicker
             id="date-picker"
-            label="Date Picker Input"
-            placeholder="Select a date"
+            label="ورودی انتخاب تاریخ"
+            placeholder="یک تاریخ انتخاب کنید"
             onChange={(dates, currentDateString) => {
               // Handle your logic
               console.log({ dates, currentDateString });
@@ -70,7 +70,7 @@ export default function DefaultInputs() {
         </div>
 
         <div>
-          <Label htmlFor="tm">Time Picker Input</Label>
+          <Label htmlFor="tm"> ورودی انتخاب زمان</Label>
           <div className="relative">
             <Input
               type="time"
@@ -84,11 +84,11 @@ export default function DefaultInputs() {
           </div>
         </div>
         <div>
-          <Label htmlFor="tm">Input with Payment</Label>
+          <Label htmlFor="tm">ورودی پرداخت</Label>
           <div className="relative">
             <Input
               type="text"
-              placeholder="Card number"
+              placeholder="شماره کارت"
               className="pl-[62px]"
             />
             <span className="absolute left-0 top-1/2 flex h-11 w-[46px] -translate-y-1/2 items-center justify-center border-r border-gray-200 dark:border-gray-800">

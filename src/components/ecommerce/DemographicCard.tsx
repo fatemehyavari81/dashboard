@@ -19,10 +19,10 @@ export default function DemographicCard() {
       <div className="flex justify-between">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-            Customers Demographic
+            جمعیت‌شناسی مشتریان
           </h3>
           <p className="mt-1 text-gray-500 text-theme-sm dark:text-gray-400">
-            Number of customer based on country
+             تعداد مشتری بر اساس کشور
           </p>
         </div>
         <div className="relative inline-block">
@@ -69,7 +69,7 @@ export default function DemographicCard() {
                 USA
               </p>
               <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-                2,379 Customers
+                2,379 مشتری
               </span>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function DemographicCard() {
                 France
               </p>
               <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-                589 Customers
+                589 مشتری
               </span>
             </div>
           </div>
