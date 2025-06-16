@@ -167,7 +167,7 @@ layer(base);
 
 @font-face {
   font-family: BYekan;
-  src: url(public/font/B_Yekan/Yekan.ttf)format('truetype');
+  src: url(/font/B_Yekan/Yekan.ttf)format('truetype');
   font-weight: normal;
   font-style: normal;
 }
